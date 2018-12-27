@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: service0
+  cloud:
+    config:
+      name: cmyzzf-config
+      profile: dev
+eureka:
+  client:
+    serviceUrl:
+      defaultZone : http://admin:admin@localhost:8080/eureka/
+server:
+  port: ${service0.port}
+
+

@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: turbine
+server:
+  port: 9999
+eureka:
+  client:
+    serviceUrl:
+      defaultZone : http://admin:admin@localhost:8080/eureka/
+turbine:
+  #需要收集监控信息的服务名
+  app-config:
+  #数指定了集群名称为default，当我们服务数量非常多的时候，可以启动多个Turbine服务来构建不同的聚合集群，
+  #而该参数可以用来区分这些不同的聚合集群，同时该参数值可以在Hystrix仪表盘中用来定位不同的聚合集群，
+  #只需要在Hystrix Stream的URL中通过cluster参数来指定；
+  cluster-name-expression:
+  combine-host-port: true
+
+

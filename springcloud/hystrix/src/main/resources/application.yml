@@ -1,0 +1,13 @@
+server:
+  port: 1301
+spring:
+  application:
+    name: hystrix-dashboard
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone : http://120.26.2.114:8763/eureka/
+security:
+  basic:
+    enabled: false

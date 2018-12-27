@@ -1,0 +1,14 @@
+server:
+  port: 1112
+spring:
+  application:
+    name: transaction
+  datasource:
+    url:  jdbc:mysql://120.26.119.149:3306/zzf?characterEncoding=utf-8
+    username: root
+    password: tryme
+    driver-class-name: com.mysql.jdbc.Driver
+eureka:
+  client:
+    serviceUrl:
+      defaultZone : http://admin:admin@localhost:8080/eureka/

@@ -1,0 +1,20 @@
+server:
+  port: 8080 # 注册中心占用8080端口
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    statusPageUrlPath: ${eureka.instance.hostname}/info
+    healthCheckUrlPath: ${eureka.instance.hostname}/health
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #其实就是 http://localhost:8080/eureka/
+security: #身份验证
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
